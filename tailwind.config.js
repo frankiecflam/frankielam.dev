@@ -22,7 +22,7 @@ module.exports = {
           400: "#565151",
           500: "#686262",
         },
-        while: {
+        white: {
           DEFAULT: "#FFFFFF",
           100: "#EDEDED",
           200: "#DCDCDC",

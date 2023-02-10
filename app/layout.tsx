@@ -1,8 +1,9 @@
 "use client";
 import "./globals.css";
+import Header from "@/components/header/header";
 import { useState, useEffect } from "react";
 
-function userPreferDarkMode() {
+function getUserDarkModePreference() {
   const darkModeQueryMatch = window.matchMedia("(prefers-color-scheme: dark)");
 
   return darkModeQueryMatch.matches;
@@ -16,7 +17,7 @@ export default function RootLayout({
   const [theme, setTheme] = useState<"dark" | "light">("dark");
 
   useEffect(() => {
-    const isDarkModeEnabledByUser = userPreferDarkMode();
+    const isDarkModeEnabledByUser = getUserDarkModePreference();
 
     setTheme(isDarkModeEnabledByUser ? "dark" : "light");
   }, []);
@@ -24,7 +25,15 @@ export default function RootLayout({
   return (
     <html lang="en" className={theme}>
       <head />
-      <body>{children}</body>
+      <body className="bg-white dark:bg-black">
+        <Header
+          theme={theme}
+          onThemeToggle={() =>
+            setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"))
+          }
+        />
+        {children}
+      </body>
     </html>
   );
 }
