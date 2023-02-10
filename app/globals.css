@@ -9,3 +9,27 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+@layer components {
+  .scroll-down {
+    animation: upDown 1.5s infinite ease-out;
+  }
+
+  @keyframes upDown {
+    0% {
+      transform: translateY(0%);
+    }
+
+    25% {
+      transform: translateY(-0.5rem);
+    }
+
+    50% {
+      transform: translateY(0.35rem);
+    }
+
+    100% {
+      transform: translateY(0%);
+    }
+  }
+}

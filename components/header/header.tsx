@@ -1,4 +1,4 @@
-import Link from "next/link";
+import NextLink from "../ui/nextLink";
 import Image from "next/image";
 import LogoBlack from "@/public/logo_black.svg";
 import LogoWhite from "@/public/logo_white.svg";
@@ -23,17 +23,17 @@ export default function Header({
   };
 
   return (
-    <header className="fixed inset-0  h-[120px] w-screen">
+    <header className="fixed inset-0  z-10 h-[120px] w-screen">
       <nav className="flex items-center justify-between py-4 px-8">
         <div className="relative z-20">
-          <Link href="/" onClick={handleHideMobileNav}>
+          <NextLink href="/" onClick={handleHideMobileNav}>
             <Image
               src={theme === "dark" ? LogoWhite : LogoBlack}
               alt="website logo"
               width={75}
               height={75}
             />
-          </Link>
+          </NextLink>
         </div>
         <HeaderNavList
           showMobileNav={showMobileNav}

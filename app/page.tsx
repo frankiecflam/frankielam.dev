@@ -1,7 +1,9 @@
+import Hero from "@/components/hero/hero";
+
 export default function Home() {
   return (
-    <main>
-      <h1>Hello World!</h1>
+    <main className="text-black dark:text-white">
+      <Hero />
     </main>
   );
 }
