@@ -23,15 +23,15 @@ export default function Header({
   };
 
   return (
-    <header className="fixed inset-0  z-10 h-[120px] w-screen">
+    <header className="fixed inset-0 z-10 h-[100px] w-screen bg-white dark:bg-black">
       <nav className="flex items-center justify-between py-4 px-8">
         <div className="relative z-20">
           <NextLink href="/" onClick={handleHideMobileNav}>
             <Image
               src={theme === "dark" ? LogoWhite : LogoBlack}
               alt="website logo"
-              width={75}
-              height={75}
+              width={60}
+              height={60}
             />
           </NextLink>
         </div>
