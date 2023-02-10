@@ -11,7 +11,7 @@ const kaisei = Kaisei_HarunoUmi({
 export default function Hero() {
   return (
     <section
-      className="container relative mx-auto min-h-screen px-8 pt-[180px] pb-[60px] md:px-0"
+      className="container relative mx-auto min-h-screen px-8 pt-44 pb-16 md:px-0"
       id="home"
     >
       <div className="flex flex-col gap-y-5 py-10 md:w-4/5">
@@ -45,35 +45,8 @@ export default function Hero() {
       </div>
       <button
         title="scroll down to view projects"
-        className="after:scroll-down absolute bottom-5 left-1/2 flex  h-8 w-5 -translate-x-1/2 items-center justify-center rounded-[25px] border-2 border-white-100 after:block  after:h-[5px] after:w-[5px] after:rounded-full after:bg-white-100 after:content-[''] sm:flex"
+        className="after:scroll-down absolute bottom-5 left-1/2 flex  h-8 w-5 -translate-x-1/2 items-center justify-center rounded-[25px] border-2 border-black-100 after:block after:h-[5px]  after:w-[5px] after:rounded-full after:bg-black-100 after:content-[''] dark:border-white-100 after:dark:bg-white-100 sm:flex"
       />
     </section>
   );
 }
-
-/*
-.scrollDown {
-    display: block;
-    position: absolute;
-    cursor: pointer;
-    bottom: 6%;
-    left: 50%;
-    width: 2rem;
-    height: 3rem;
-    border: 2px solid var(--font-color-light-3);
-    border-radius: 2.5rem;
-    transform: translateX(-50%);
-  }
-
-  .scrollDown::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0.5rem;
-    height: 0.5rem;
-    background-color: var(--font-color-light-1);
-    border-radius: 100%;
-    animation: upDown 1.5s infinite ease-out;
-  }
-*/
