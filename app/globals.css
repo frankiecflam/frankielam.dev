@@ -32,4 +32,78 @@
       transform: translateY(0%);
     }
   }
+
+  .section-header {
+    @apply mb-28;
+  }
+
+  .section-title {
+    @apply uppercase tracking-[3.2px] text-black-200 dark:text-white-200;
+  }
+
+  .section-description {
+    @apply mt-2 text-4xl font-bold text-black-100 dark:text-white-100;
+  }
+
+  .section-description::first-letter {
+    @apply uppercase;
+  }
+
+  .project-list > li:nth-child(odd) {
+    @apply bg-white-100;
+  }
+
+  .project-list > li:nth-child(even) {
+    @apply bg-white-200 dark:bg-black-100;
+  }
+
+  .project-list > li:nth-child(4n + 3) {
+    @apply lg:bg-white-200 lg:dark:bg-black-100;
+  }
+
+  .project-list > li:nth-child(4n + 4) {
+    @apply lg:bg-white-100 lg:dark:bg-white-100;
+  }
+
+  /* text colors adapt to changes in background color */
+  .project-list
+    > li:nth-child(odd)
+    :is(.project-date, .project-link, .project-stack) {
+    @apply text-black-200;
+  }
+
+  .project-list > li:nth-child(odd) :is(.project-title) {
+    @apply text-black;
+  }
+
+  .project-list
+    > li:nth-child(even)
+    :is(.project-date, .project-link, .project-stack) {
+    @apply text-black-200 dark:text-white-200;
+  }
+
+  .project-list > li:nth-child(even) :is(.project-title) {
+    @apply text-black dark:text-white;
+  }
+
+  .project-list
+    > li:nth-child(4n + 3)
+    :is(.project-date, .project-link, .project-stack) {
+    @apply lg:text-black-200 lg:dark:text-white-200;
+  }
+
+  .project-list > li:nth-child(4n + 3) :is(.project-title) {
+    @apply lg:text-black lg:dark:text-white;
+  }
+
+  .project-list
+    > li:nth-child(4n + 4)
+    :is(.project-date, .project-link, .project-stack) {
+    @apply lg:text-black-200 lg:dark:text-black-200;
+  }
+
+  .project-list > li:nth-child(4n + 4) :is(.project-title) {
+    @apply lg:text-black lg:dark:text-black;
+  }
+  /*  */
 }
