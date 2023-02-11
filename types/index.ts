@@ -8,3 +8,9 @@ export interface Project {
   thumbnail: StaticImageData;
   stack: string[];
 }
+
+
+export interface Skillset {
+  categoryName: string;
+  stack: string[];
+}
