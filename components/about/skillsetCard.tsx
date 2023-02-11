@@ -12,7 +12,7 @@ export default function SkillsetCard({
 }: SkillsetCardProps & LiHTMLAttributes<HTMLLIElement>) {
   return (
     <li
-      className={`mx-auto flex min-h-[200px] w-full flex-col gap-y-6 p-6 ring-2 ring-white-300 transition-all duration-300 hover:ring-4 hover:dark:ring-white-100 hover:ring-black-100 hover:scale-x-110 sm:w-[450px] rounded-md  ${
+      className={`mx-auto flex min-h-[200px] w-full flex-col gap-y-6 rounded-md p-6 ring-2 ring-white-300 transition-all duration-300 hover:scale-x-110 hover:ring-4 hover:ring-black-100 hover:dark:ring-white-100 sm:w-[450px]  ${
         className ? className : ""
       }`}
     >
