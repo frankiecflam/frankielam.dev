@@ -40,6 +40,7 @@ export default function Skillset() {
   return (
     <div>
       <div className="mb-10">
+        <p className="section-title text-center">my skillset</p>
         <p className="section-description text-center">
           the tools with which i build things.
         </p>
