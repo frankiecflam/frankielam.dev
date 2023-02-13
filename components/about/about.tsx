@@ -1,6 +1,7 @@
 import Section from "../ui/section";
 import Story from "./story";
 import Skillset from "./skillset";
+import Journey from "./journey";
 
 export default function About() {
   return (
@@ -12,6 +13,7 @@ export default function About() {
       <div className="flex flex-col gap-y-32">
         <Story />
         <Skillset />
+        <Journey />
       </div>
     </Section>
   );
