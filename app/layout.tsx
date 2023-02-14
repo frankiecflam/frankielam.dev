@@ -1,6 +1,7 @@
 "use client";
 import "./globals.css";
 import Header from "@/components/header/header";
+import Footer from "@/components/footer/footer";
 import { useState, useEffect } from "react";
 
 function getUserDarkModePreference() {
@@ -25,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={theme}>
       <head />
-      <body className="bg-white dark:bg-black">
+      <body className="bg-white text-black dark:bg-black dark:text-white">
         <Header
           theme={theme}
           onThemeToggle={() =>
@@ -33,6 +34,7 @@ export default function RootLayout({
           }
         />
         {children}
+        <Footer />
       </body>
     </html>
   );
