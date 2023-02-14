@@ -16,10 +16,10 @@ export default function HeaderNavList({
       }`}
       onClick={onClick}
     >
-      <HeaderNavItem href="#home">home</HeaderNavItem>
-      <HeaderNavItem href="#projects">projects</HeaderNavItem>
-      <HeaderNavItem href="#about">about</HeaderNavItem>
-      <HeaderNavItem href="#contact">contact</HeaderNavItem>
+      <HeaderNavItem href="home" onClick={onClick}>home</HeaderNavItem>
+      <HeaderNavItem href="projects" onClick={onClick}>projects</HeaderNavItem>
+      <HeaderNavItem href="about" onClick={onClick}>about</HeaderNavItem>
+      <HeaderNavItem href="contact" onClick={onClick}>contact</HeaderNavItem>
     </ul>
   );
 }

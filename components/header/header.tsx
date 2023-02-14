@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-scroll";
 import Image from "next/image";
 import LogoBlack from "@/public/logo_black.svg";
 import LogoWhite from "@/public/logo_white.svg";
@@ -6,6 +6,7 @@ import HeaderNavList from "./headerNavList";
 import HeaderThemeToggler from "./headerThemeToggler";
 import HeaderMenuBtn from "./headerMenuBtn";
 import { useState } from "react";
+import { ScrollIntoViewDuration } from "@/utils/constant";
 
 export default function Header({
   theme,
@@ -26,7 +27,14 @@ export default function Header({
     <header className="fixed inset-0 z-10 h-[100px] w-screen bg-white dark:bg-black">
       <nav className="flex items-center justify-between py-4 px-8">
         <div className="relative z-20">
-          <Link href="/" onClick={handleHideMobileNav}>
+          <Link
+            to="home"
+            smooth
+            spy
+            duration={ScrollIntoViewDuration}
+            onClick={handleHideMobileNav}
+            className="cursor-pointer"
+          >
             <Image
               src={theme === "dark" ? LogoWhite : LogoBlack}
               alt="website logo"
