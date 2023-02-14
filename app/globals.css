@@ -112,4 +112,27 @@
     @apply lg:text-black lg:dark:text-black;
   }
   /*  */
+
+  .contact-input-group {
+    @apply relative;
+  }
+
+  .contact-input-group::before,
+  .contact-input-group::after {
+    @apply absolute bottom-0 left-0 h-[3px] w-full content-[''];
+  }
+
+  .contact-input-group::before {
+    @apply bg-white-300;
+  }
+
+  .contact-input-group:has(input:focus)::after,
+  .contact-input-group:has(textarea:focus)::after {
+    @apply origin-left bg-black-500 transition-all duration-300;
+  }
+
+  .contact-input-group:has(input:focus) > label,
+  .contact-input-group:has(textarea:focus) > label {
+    @apply text-black-100 transition-all duration-200 dark:text-white-100;
+  }
 }
