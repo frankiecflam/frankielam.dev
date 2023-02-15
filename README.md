@@ -1,38 +1,68 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio Website - Frankie Lam
 
-## Getting Started
+This is a portfolio website where I showcase some of the projects I have built and share my programming journey as a self-taught.
 
-First, run the development server:
+The site was rebuilt in Feb 2023 with the tech stack of React, Next.js, TypeScript and Tailwind CSS.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Table of contents
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [Overview](#overview)
+  - [Reasons for the rebuild](#reasons-for-the-rebuild)
+  - [Background](#background)
+    - [Tech Stack](#tech-stack)
+    - [Section](#section)
+    - [Design](#design)
+  - [Links](#links)
+- [Social](#social)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Overview
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### Reasons for the rebuild
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- The structure of the previous version is unorganised and inconsistent, making it very hard to add and update site content.
+- Missing feature of dark mode, presenting inaccessible to users who are sensitive to light colours.
+- Untested components, making the site vulnerable to bugs when refactoring.
+- Inflexibility in using server-side rendering with React Server Component (RSC).
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Background
 
-## Learn More
+#### Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+- Languages: TypeScript
+- Framework: Next.js
+- Libraries: React, Tailwind CSS, React Testing Library, Jest, Zod, Framer Motion, React-Scroll, React Icons, EmailJS
+- Tools & Platforms: Git, GitHub, Vercel, Figma
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### Section
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Home
+- Projects
+- About
+  - Story
+  - Skillset
+  - Journey
+- Contact
 
-## Deploy on Vercel
+#### Design
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Typography: Nunito
+- Colors:
+  - Dark: #111010, #211F1F, #333030
+  - Light #FFFFFF, #EDEDED, #CBCBCB
+  - Complimentary: #397F7A
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Links
+
+- GitHub: [https://github.com/frankiecflam/frankielam.dev](https://github.com/frankiecflam/frankielam.dev)
+- Live Site: [https://www.frankielam.dev](https://www.frankielam.dev)
+
+Previous version
+
+- GitHub:[https://github.com/frankiecflam/frankielam.dev-old](https://github.com/frankiecflam/frankielam.dev-old)
+- Live Site: [https://frankielam.vercel.app](https://frankielam.vercel.app)
+
+## Social
+
+- Email - [Frankie Lam](cfl.frankie@gmail.com)
+- Instagram - [@\_frankiecf](https://www.instagram.com/_frankiecf)
+- Twitter - [@frankiecflam](https://twitter.com/frankiecflam)
