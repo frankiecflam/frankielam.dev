@@ -13,7 +13,7 @@ export default function Head() {
       <meta property="og:url" content="www.frankielam.dev" />
       <meta
         property="og:image"
-        content="http://localhost:3000/api/og?title=Frankie%20Lam&description=self-taught%20frontend%20developer"
+        content="https://www.frankielam.dev/api/og?title=Frankie%20Lam&description=self-taught%20frontend%20developer"
       />
     </>
   );
