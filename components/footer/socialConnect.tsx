@@ -1,4 +1,5 @@
 import NextLink from "../ui/nextLink";
+import { motion } from "framer-motion";
 
 interface Social {
   name: string;
@@ -15,15 +16,35 @@ export default function SocialConnect() {
   return (
     <div className="flex flex-col-reverse items-center gap-y-20 px-4 lg:flex-row lg:justify-between">
       <div>
-        <p className="text-lg font-bold">Designed & Built by Frankie Lam</p>
+        <motion.p
+          className="text-lg font-bold"
+          initial={{ x: "-100px", opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          Designed & Built by Frankie Lam
+        </motion.p>
       </div>
       <div className="flex flex-col items-center gap-y-8">
-        <p className="text-5xl font-bold first-letter:uppercase lg:text-4xl">
+        <motion.p
+          className="text-5xl font-bold first-letter:uppercase lg:text-4xl"
+          initial={{ y: "100px", opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           connect with me
-        </p>
+        </motion.p>
         <ul className="flex flex-col gap-y-3">
           {SOCIALS.map((social) => (
-            <li key={social.name}>
+            <motion.li
+              key={social.name}
+              initial={{ y: "100px", opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3 }}
+            >
               <NextLink
                 href={social.href}
                 className="text-3xl capitalize tracking-wide text-black-200 transition-all duration-300 hover:text-black dark:text-white-200 hover:dark:text-white"
@@ -31,7 +52,7 @@ export default function SocialConnect() {
               >
                 {social.name}
               </NextLink>
-            </li>
+            </motion.li>
           ))}
         </ul>
       </div>
