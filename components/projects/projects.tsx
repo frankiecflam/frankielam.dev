@@ -3,7 +3,7 @@ import ProjectList from "./projectList";
 
 export default function Projects() {
   return (
-    <Section>
+    <Section id="projects">
       <header className="section-header text-center">
         <h2 className="section-title">projects</h2>
         <p className="section-description">

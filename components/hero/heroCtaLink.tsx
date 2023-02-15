@@ -1,5 +1,7 @@
-import Link from "next/link";
+"use client";
+
 import { ReactNode } from "react";
+import ScrollLink from "../ui/scrollLink";
 
 interface HeroCtaLinkProps {
   children: ReactNode;
@@ -13,11 +15,11 @@ export default function HeroCtaLink({
   className,
 }: HeroCtaLinkProps) {
   return (
-    <Link
-      href={href}
-      className={`rounded-md py-2 px-4 ${className} tracking-wide drop-shadow-xl transition-all duration-300 hover:-translate-y-1 hover:drop-shadow-2xl active:translate-y-0 active:drop-shadow-xl`}
+    <ScrollLink
+      to={href}
+      className={`rounded-md py-2 px-4 ${className} cursor-pointer tracking-wide drop-shadow-xl transition-all duration-300 hover:-translate-y-1 hover:drop-shadow-2xl active:translate-y-0 active:drop-shadow-xl`}
     >
       {children}
-    </Link>
+    </ScrollLink>
   );
 }

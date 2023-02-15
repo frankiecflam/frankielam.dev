@@ -1,7 +1,9 @@
+"use client";
 import { Kaisei_HarunoUmi } from "@next/font/google";
 import Balancer from "react-wrap-balancer";
 import HeroCtaLink from "./heroCtaLink";
 import Section from "../ui/section";
+import ScrollLink from "../ui/scrollLink";
 
 const kaisei = Kaisei_HarunoUmi({
   weight: ["700"],
@@ -28,22 +30,23 @@ export default function Hero() {
         </p>
         <div className="mt-8 flex items-center gap-x-6">
           <HeroCtaLink
-            href="#projects"
+            href="projects"
             className="bg-[#397F7A] text-center text-xl text-white-100 ring-2 ring-[#397F7A] md:text-2xl"
           >
             view projects
           </HeroCtaLink>
           <HeroCtaLink
-            href="#about"
+            href="about"
             className="text-center text-xl text-black-100 ring-2 ring-[#397F7A]  dark:text-white-100 md:text-2xl"
           >
             know about me
           </HeroCtaLink>
         </div>
       </div>
-      <button
+      <ScrollLink
         title="scroll down to view projects"
-        className="after:scroll-down absolute bottom-5 left-1/2 flex  h-8 w-5 -translate-x-1/2 items-center justify-center rounded-[25px] border-2 border-black-100 after:block after:h-[5px]  after:w-[5px] after:rounded-full after:bg-black-100 after:content-[''] dark:border-white-100 after:dark:bg-white-100 sm:flex"
+        className="after:scroll-down absolute bottom-5 left-1/2 flex  h-8 w-5 -translate-x-1/2 cursor-pointer items-center justify-center rounded-[25px] border-2 border-black-100 after:block  after:h-[5px] after:w-[5px] after:rounded-full after:bg-black-100 after:content-[''] dark:border-white-100 after:dark:bg-white-100 sm:flex"
+        to="projects"
       />
     </Section>
   );

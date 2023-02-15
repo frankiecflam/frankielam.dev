@@ -4,7 +4,7 @@ import ContactForm from "./contactForm";
 
 export default function Contact() {
   return (
-    <Section>
+    <Section className="contact">
       <header className="section-header mb-10 text-center">
         <h2 className="section-title">contact</h2>
         <p className="section-description mx-auto max-w-[800px]">

@@ -1,21 +1,25 @@
-import NextLink from "../ui/nextLink";
 import { ReactNode } from "react";
+import ScrollLink from "../ui/scrollLink";
 
 export default function HeaderNavItem({
   children,
   href,
+  onClick,
 }: {
   children: ReactNode;
   href: string;
+  onClick: () => void;
 }) {
   return (
     <li>
-      <NextLink
-        href={href}
-        className="text-2xl capitalize text-black-200 dark:text-white-200 lg:text-lg"
+      <ScrollLink
+        to={href}
+        className="nav-link"
+        activeClass="nav-link-active"
+        onClick={onClick}
       >
         {children}
-      </NextLink>
+      </ScrollLink>
     </li>
   );
 }
