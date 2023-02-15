@@ -9,6 +9,8 @@ export default function Head() {
       />
       <link rel="icon" href="/favicon.ico" />
       <meta property="og:title" content="Frankie Lam - Frontend Developer" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="www.frankielam.dev" />
       <meta
         property="og:image"
         content="http://localhost:3000/api/og?title=Frankie%20Lam&description=self-taught%20frontend%20developer"
