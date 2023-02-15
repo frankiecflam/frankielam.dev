@@ -4,6 +4,7 @@ import { BsExclamationCircle as InvalidIcon } from "react-icons/bs";
 import { FormEvent, useState } from "react";
 import { nameSchema, emailSchema, messageSchema } from "@/types";
 import { sendForm } from "@emailjs/browser";
+import { motion } from "framer-motion";
 
 function nameValidate(value: string) {
   const result = nameSchema.safeParse(value);
@@ -83,7 +84,17 @@ export default function ContactForm() {
       noValidate
     >
       <div className="relative flex flex-col gap-y-12">
-        <div className="contact-input-group">
+        <motion.div
+          className="contact-input-group"
+          initial={{ x: "-100px", opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true, margin: "-15%" }}
+          transition={{
+            duration: 0.5,
+            type: "spring",
+            stiffness: 100,
+          }}
+        >
           <input
             name="name"
             type="text"
@@ -107,8 +118,18 @@ export default function ContactForm() {
                 : "scale-0"
             }`}
           />
-        </div>
-        <div className="contact-input-group">
+        </motion.div>
+        <motion.div
+          className="contact-input-group"
+          initial={{ x: "-100px", opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true, margin: "-15%" }}
+          transition={{
+            duration: 0.5,
+            type: "spring",
+            stiffness: 100,
+          }}
+        >
           <input
             name="email"
             type="email"
@@ -132,8 +153,18 @@ export default function ContactForm() {
                 : "scale-0"
             }`}
           />
-        </div>
-        <div className="contact-input-group">
+        </motion.div>
+        <motion.div
+          className="contact-input-group"
+          initial={{ x: "-100px", opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true, margin: "-15%" }}
+          transition={{
+            duration: 0.5,
+            type: "spring",
+            stiffness: 100,
+          }}
+        >
           <textarea
             name="message"
             id="message"
@@ -157,7 +188,7 @@ export default function ContactForm() {
                 : "scale-0"
             }`}
           />
-        </div>
+        </motion.div>
         <div
           className={`absolute right-2 -bottom-10 flex items-center gap-x-2 text-black-300 transition-all duration-300 dark:text-white-300 ${
             hasInvalidInputs ? "scale-100" : "scale-0"

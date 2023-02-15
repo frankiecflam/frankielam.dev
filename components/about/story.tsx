@@ -1,6 +1,14 @@
+"use client";
+import { motion } from "framer-motion";
+
 export default function Story() {
   return (
-    <div>
+    <motion.div
+      initial={{ y: "100px" }}
+      whileInView={{ y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1, ease: "easeOut" }}
+    >
       <div className="mx-auto mt-6 flex max-w-[700px] flex-col gap-y-6">
         <p className="text-xl leading-[130%] tracking-wide text-black dark:text-white">
           Hi, I&#39;m Frankie. I am a self-taught developer with a passion for
@@ -50,6 +58,6 @@ export default function Story() {
           Because of programming, I feel happy living my life every day.
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 }

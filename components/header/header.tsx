@@ -7,6 +7,7 @@ import HeaderThemeToggler from "./headerThemeToggler";
 import HeaderMenuBtn from "./headerMenuBtn";
 import { useState } from "react";
 import { ScrollIntoViewDuration } from "@/utils/constant";
+import { motion } from "framer-motion";
 
 export default function Header({
   theme,
@@ -24,7 +25,15 @@ export default function Header({
   };
 
   return (
-    <header className="fixed inset-0 z-10 h-[100px] w-screen bg-white dark:bg-black">
+    <motion.header
+      className="fixed inset-0 z-10 h-[100px] w-screen bg-white dark:bg-black"
+      initial={{ opacity: 0, y: "20px" }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.6,
+        delay: 2,
+      }}
+    >
       <nav className="flex items-center justify-between py-4 px-8">
         <div className="relative z-20">
           <Link
@@ -62,6 +71,6 @@ export default function Header({
           />
         </div>
       </nav>
-    </header>
+    </motion.header>
   );
 }

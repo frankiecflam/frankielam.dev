@@ -1,3 +1,4 @@
+"use client";
 import { BiWalk as WalkIcon } from "react-icons/bi";
 import { BsCodeSlash as CodeIcon } from "react-icons/bs";
 import { GoBrowser as BrowserIcon } from "react-icons/go";
@@ -17,6 +18,7 @@ import { BsCompass as CompassIcon } from "react-icons/bs";
 import { Journey as JourneyType } from "@/types";
 import JourneyItem from "./journeyItem";
 import JourneyItemLink from "./journeyItemLink";
+import { motion } from "framer-motion";
 
 const JOURNEY: JourneyType[] = [
   {
@@ -239,19 +241,35 @@ export default function Journey() {
               positionOnTimeline={index % 2 === 0 ? "right" : "left"}
             />
           ))}
-          <div className="bg-white py-4 dark:bg-black">
+          <motion.div
+            className="bg-white py-4 dark:bg-black"
+            initial={{ y: "100px", opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+          >
             <ul className="flex flex-col items-center gap-y-4 ">
               {Array.from({ length: 3 }, (_, index) => (
-                <li
+                <motion.li
                   key={index}
                   className="h-5 w-5  rounded-full bg-black-300 dark:bg-white-200"
+                  initial={{ transform: "scale(3)" }}
+                  whileInView={{ transform: "scale(1)" }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.33 }}
                 />
               ))}
             </ul>
-            <p className="mt-6 text-2xl font-semibold text-black-100 dark:text-white-100">
+            <motion.p
+              className="mt-6 text-2xl font-semibold text-black-100 dark:text-white-100"
+              initial={{ y: "100px", opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.66, ease: "easeOut" }}
+            >
               More to come ...
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
         </ul>
         <div className="absolute top-0 left-1/2 -z-10 h-full w-[3px] -translate-x-1/2 bg-white-300" />
       </div>

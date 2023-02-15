@@ -1,12 +1,20 @@
+"use client";
 import { Project as ProjectItemProps } from "@/types";
 import NextLink from "@/components/ui/nextLink";
 import Image from "next/image";
 import { FaHammer as HammerIcon } from "react-icons/fa";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function ProjectItem(props: ProjectItemProps) {
   return (
-    <li className="flex flex-col gap-y-10 rounded-md p-8">
+    <motion.li
+      className="flex flex-col gap-y-10 rounded-md p-8"
+      initial={{ y: "100px", opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+    >
       <div className="flex flex-col gap-y-5">
         <p className="project-date uppercase tracking-wide">{props.date}</p>
         <p className="project-title w-3/4 text-4xl font-bold">{props.title}</p>
@@ -44,6 +52,6 @@ export default function ProjectItem(props: ProjectItemProps) {
           <p className="project-stack">{props.stack.join(", ")}</p>
         </div>
       </div>
-    </li>
+    </motion.li>
   );
 }

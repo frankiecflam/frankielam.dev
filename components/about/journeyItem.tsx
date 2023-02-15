@@ -1,4 +1,6 @@
+"use client";
 import { Journey } from "@/types";
+import { motion } from "framer-motion";
 
 export default function JourneyItem({
   icon,
@@ -7,12 +9,18 @@ export default function JourneyItem({
   positionOnTimeline,
 }: Journey & { positionOnTimeline: "right" | "left" }) {
   return (
-    <li
+    <motion.li
       className={`relative flex flex-col items-center lg:w-[500px]  ${
         positionOnTimeline === "right"
           ? "lg:translate-x-1/2 lg:flex-row lg:items-start"
           : "lg:-translate-x-1/2 lg:flex-row-reverse lg:items-start"
       }`}
+      initial={{
+        opacity: 0,
+      }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, margin: "-10%" }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
     >
       <div
         className={`relative h-5 w-5  rounded-full bg-black-300 dark:bg-white-200 lg:absolute lg:top-0 ${
@@ -46,6 +54,6 @@ export default function JourneyItem({
           </div>
         </div>
       </div>
-    </li>
+    </motion.li>
   );
 }
