@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
-import { Link } from "react-scroll";
-import { ScrollIntoViewDuration } from "@/utils/constant";
+import ScrollLink from "../ui/scrollLink";
 
 export default function HeaderNavItem({
   children,
@@ -13,17 +12,14 @@ export default function HeaderNavItem({
 }) {
   return (
     <li>
-      <Link
+      <ScrollLink
         to={href}
-        smooth
-        spy
-        duration={ScrollIntoViewDuration}
         className="nav-link"
         activeClass="nav-link-active"
         onClick={onClick}
       >
         {children}
-      </Link>
+      </ScrollLink>
     </li>
   );
 }
