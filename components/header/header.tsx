@@ -26,7 +26,7 @@ export default function Header({
 
   return (
     <motion.header
-      className="fixed inset-0 z-10 h-[100px] w-screen bg-white dark:bg-black"
+      className="fixed inset-0 z-10 h-[80px] w-screen bg-white dark:bg-black lg:h-[100px]"
       initial={{ opacity: 0, y: "20px" }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
@@ -34,7 +34,7 @@ export default function Header({
         delay: 2,
       }}
     >
-      <nav className="flex items-center justify-between py-4 px-8">
+      <nav className="flex items-center justify-between px-8 py-2 lg:py-4">
         <div className="relative z-20">
           <Link
             to="home"
