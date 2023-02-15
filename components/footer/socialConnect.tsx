@@ -17,7 +17,7 @@ export default function SocialConnect() {
     <div className="flex flex-col-reverse items-center gap-y-20 px-4 lg:flex-row lg:justify-between">
       <div>
         <motion.p
-          className="text-lg font-bold"
+          className="text-center text-lg font-bold"
           initial={{ x: "-100px", opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
@@ -28,7 +28,7 @@ export default function SocialConnect() {
       </div>
       <div className="flex flex-col items-center gap-y-8">
         <motion.p
-          className="text-5xl font-bold first-letter:uppercase lg:text-4xl"
+          className="text-center text-5xl font-bold first-letter:uppercase lg:text-4xl"
           initial={{ y: "100px", opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
