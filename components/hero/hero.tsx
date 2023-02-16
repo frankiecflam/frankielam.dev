@@ -14,7 +14,7 @@ const kaisei = Kaisei_HarunoUmi({
 
 export default function Hero() {
   return (
-    <Section className="relative min-h-screen pt-44" id="home">
+    <Section className="relative min-h-screen pt-20 sm:pt-44" id="home">
       <div className="flex flex-col gap-y-5 py-10 md:w-4/5">
         <motion.h1
           className={`text-5xl md:text-6xl  ${kaisei.className}`}
