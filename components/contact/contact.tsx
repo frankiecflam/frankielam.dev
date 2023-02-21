@@ -11,7 +11,7 @@ export default function Contact() {
           If you fancy a chat, feel free to contact me on{" "}
           <NextLink
             href="mailto:cfl.frankie@gmail.com"
-            className="relative origin-center  font-normal text-black-300 after:scale-100 hover:text-black-100 dark:text-white-300 hover:dark:text-white-100"
+            className="relative origin-center  text-2xl font-normal text-black-300 after:scale-100 hover:text-black-100 dark:text-white-300 hover:dark:text-white-100"
           >
             cfl.frankie@gmail.com
           </NextLink>
