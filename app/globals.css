@@ -112,6 +112,35 @@
     @apply lg:text-black lg:dark:text-black;
   }
   /*  */
+  /* New label on first project item */
+  .project-list > li:first-child {
+    @apply relative;
+  }
+
+  .project-list > li:first-child:before,
+  .project-list > li:first-child:after {
+    @apply absolute top-10 right-10 flex h-14 w-14 items-center justify-center rounded-full p-2;
+  }
+
+  .project-list > li:first-child:before {
+    @apply border-4 border-white-200 tracking-wide text-black content-['NEW'];
+  }
+
+  .project-list > li:first-child:after {
+    @apply border-4 border-t-black-200 content-[''];
+  }
+
+  .project-list > li:first-child:hover::after {
+    animation: spin 0.6s linear;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /*  */
 
   .contact-input-group {
     @apply relative;
