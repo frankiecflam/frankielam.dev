@@ -22,7 +22,7 @@ The site was rebuilt in Feb 2023 with the tech stack of React, Next.js, TypeScri
 - The structure of the previous version is unorganised and inconsistent, making it very hard to add and update site content.
 - Missing feature of dark mode, presenting inaccessible to users who are sensitive to light colours.
 - Untested components, making the site vulnerable to bugs when refactoring.
-- Inflexibility in using server-side rendering with React Server Component (RSC).
+- Inflexibility in rendering components on the server with RSC
 
 ### Background
 
